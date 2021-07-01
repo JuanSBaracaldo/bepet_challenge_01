@@ -15,6 +15,14 @@ NOT_PALINDROMES = [
 
 def is_palindrome(palindrome):
     # Start coding here
+    pal = [i for i in palindrome.lower() if i != " "]
+
+    for _ in range(len(pal)):
+        if pal[_] != pal[-(_+1)]:
+            return False
+    return True
+
+
     pass
 
 def validate():
